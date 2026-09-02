@@ -2,7 +2,7 @@
 # AuditPro MVP — Préparation de dossier d'audit
 
 MVP du cas pédagogique AuditPro/ACSI : un **workflow orchestré** (pas un agent) qui prépare un dossier de travail sourcé pour un auditeur, avant mission — sans jamais qualifier d'écart ni formuler de conclusion.
-Voir `docs/cadrage_mvp.md`, `docs/architecture_code.md`
+Voir `docs/cadrage.md`, `docs/architecture_code.md`
 
 ## Installation
 
