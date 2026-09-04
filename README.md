@@ -12,7 +12,7 @@ En Output, Un règlement applicable, des articles potentiellement non conformes 
 
 - **Entrée** : un texte (`str`) — un extrait de déclaration, de constat d'auditeur ou de document.
 - **Sortie** : `{"regulation_id": ..., "nc_articles": [...], "severity": ..., "status": ...}`
-  - `regulation_id` : un des 9 règlements actifs (`REG-001, 002, 003, 005, 006, 007, 008, 009, 010`) ou `null`
+  - `regulation_id` : un des règlements actifs (`REG-001, 002, 003, 005, 006, 007, 008, 009, 010`) ou `null`
   - `severity` : `LOW | MEDIUM | HIGH | CRITICAL` ou `null`.
   - `status` : `ok` ou `needs_review`.
 - **Refus** : si le texte est vide, ou si aucun règlement ne correspond à aucun mot-clé connu, `status` vaut `needs_review` et `regulation_id`/`nc_articles`/`severity` valent `null` — le système n'invente rien.
@@ -38,6 +38,7 @@ Le contrat est dans `src/classify.py`.
 .venv/bin/python3 -m src.cli ""
 # -> null, null, null, needs_review
 ```
+
 ## Installation et lancement
 
 ```bash
@@ -48,7 +49,7 @@ cp .env.example .env   # aucune clé requise à ce stade — mocks uniquement
 .venv/bin/python3 -m src.cli "votre extrait de texte ici"
 .venv/bin/python3 scripts/measure_baseline.py
 ```
-
+![Lancement vertical slice ](Acsi_audit.png)
 ## Structure
 
 ```
@@ -67,7 +68,6 @@ acsi-audit/
     ├── llm_client.py       # LLM mocké : articles + sévérité
     └── config.py           # lecture des variables d'environnement
 ```
-
 
 
 __________________________________________________________________________________
