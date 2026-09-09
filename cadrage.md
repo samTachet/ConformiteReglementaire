@@ -13,3 +13,6 @@ Nominal: conforme
 Ambigu: à vérifier : nécessite une intervention humaine
 invalide: non-confome
 
+**un trajet baseline (complet mais étroit)** :
+Une demande d'évaluation d'une entreprise sur un aspect de conformité règelementaire arrive, 
+la référence d'un acticle et une priorité sortent (cas conforme ou non conforme), et le cas ambigu est flagé à vérifier
